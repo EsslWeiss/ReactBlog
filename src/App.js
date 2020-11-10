@@ -3,12 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Components/Header';
 
 function App() {
   return (
     <div>
-      <h1> Hello from React! </h1>
-      <Button variant="primary">Im button</Button>
+      <Header />
     </div>
   );
 }
