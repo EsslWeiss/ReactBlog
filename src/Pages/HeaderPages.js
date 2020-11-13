@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import CarouselBox from '../Components/CarouselBox';
-import { Container, Tab, Row, Col, Nav } from 'react-bootstrap';
+import { 
+	Container, 
+	Tab, 
+	Row, 
+	Col, 
+	Nav,
+	Form,
+	Button,
+	CardDeck,
+	Card
+} from 'react-bootstrap';
 
 import progImg from '../assets/programming_language.png';
 import frameworkImg from '../assets/Server-Side-Frameworks.png';
@@ -10,7 +20,59 @@ import designImg from '../assets/browser-design.png';
 export class Home extends Component {
 	render() {
 		return (
-			<CarouselBox />
+			<>
+				<CarouselBox />
+
+				<Container>
+					<h2 className="text-center m-4">Landscapes</h2>
+					<CardDeck className="m-4">
+						<Card>
+							<Card.Img 
+								variant="top"
+								src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							/>
+							<Card.Body>
+								<Card.Title>Sunset</Card.Title>
+								<Card.Text>just sunset</Card.Text>
+								<Button variant="primary">About</Button>
+							</Card.Body>
+						</Card>
+						<Card>
+							<Card.Img 
+								variant="top"
+								src="https://images.pexels.com/photos/4620574/pexels-photo-4620574.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							/>
+							<Card.Body>
+								<Card.Title>Morning mountains</Card.Title>
+								<Card.Text>morning</Card.Text>
+								<Button variant="primary">About</Button>
+							</Card.Body>
+						</Card>
+						<Card>
+							<Card.Img 
+								variant="top"
+								src="https://images.pexels.com/photos/1743165/pexels-photo-1743165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							/>
+							<Card.Body>
+								<Card.Title>Mountains at night</Card.Title>
+								<Card.Text>night</Card.Text>
+								<Button variant="primary">About</Button>
+							</Card.Body>
+						</Card>
+						<Card>
+							<Card.Img 
+								variant="top"
+								src="https://images.pexels.com/photos/2007139/pexels-photo-2007139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+							/>
+							<Card.Body>
+								<Card.Title>It's snowing</Card.Title>
+								<Card.Text>snowing</Card.Text>
+								<Button variant="primary">About</Button>
+							</Card.Body>
+						</Card>
+					</CardDeck>
+				</Container>
+			</>
 		)
 	}
 }
@@ -64,8 +126,30 @@ export class About extends Component {
 
 export class Contacts extends Component {
 	render() {
+		const styles = {width: '500px'}
 		return (
-			<div>Contacts!</div>
+			<Container style={styles}>
+				<h2 className="text-center"> Contact me </h2>
+				<Form>
+					<Form.Group controlId="EmailControl">
+						<Form.Label>Email address</Form.Label>
+						<Form.Control type="email" placeholder="enter email address" />
+						<Form.Text>
+							Thanks!
+						</Form.Text>
+					</Form.Group>
+					<Form.Group controlId="PasswordControl">
+						<Form.Label>Example textarea</Form.Label>
+						<Form.Control as="textarea" rows="3" />
+					</Form.Group>
+					<Form.Group controlId="CheckBoxControl">
+						<Form.Check type="checkbox" label="Check me out" />
+					</Form.Group>
+
+					<Button variant="primary" type="submit"> Submit </Button>
+				</Form>
+
+			</Container>
 		);
 	}
 }
