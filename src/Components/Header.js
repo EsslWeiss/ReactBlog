@@ -25,12 +25,12 @@ export default class Header extends Component {
 					<Container>
 						<Navbar.Brand href="/">
 							<img
-								src={logo}
-								heigh="45"
-								width="45"
+								src={ logo }
+								heigh="50"
+								width="50"
 								className="d-inline-block align-top"
 								alt="logo"
-							/> React blog
+							/> Py-Blog
 						</Navbar.Brand>
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">

@@ -9,7 +9,9 @@ import {
 	Form,
 	Button,
 	CardDeck,
-	Card
+	Card,
+	ListGroup,
+	Media
 } from 'react-bootstrap';
 
 import progImg from '../assets/programming_language.png';
@@ -129,7 +131,7 @@ export class Contacts extends Component {
 		const styles = {width: '500px'}
 		return (
 			<Container style={styles}>
-				<h2 className="text-center"> Contact me </h2>
+				<h2 className="text-center m-4"> Contact me </h2>
 				<Form>
 					<Form.Group controlId="EmailControl">
 						<Form.Label>Email address</Form.Label>
@@ -157,7 +159,41 @@ export class Contacts extends Component {
 export class Blog extends Component {
 	render() {
 		return (
-			<div>Blog!</div>
+			<Container>
+				<Row>
+					<Col md="9">
+						<Media className="m-5">
+							<img 
+								width={350}
+								height={200}
+								className="mr-3"
+								src="https://sun9-31.userapi.com/HEqthsqVVvUE6MRYESSJEQtv29iFsRvldSFSfg/TXuk0-xnTBk.jpg"
+							/>
+							<Media.Body>
+								<h5>Working with Nginx</h5>
+								<p>nginx with django</p>
+							</Media.Body>
+						</Media>
+					</Col>
+					<Col md="3">
+						<h5 className="text-center mt-5">Categories</h5>
+						<Card>
+							<ListGroup variant="flush">
+								<ListGroup.Item>Python</ListGroup.Item>
+								<ListGroup.Item>JavaScript</ListGroup.Item>
+								<ListGroup.Item>SQL</ListGroup.Item>
+							</ListGroup>
+						</Card>
+
+						<Card className="mt-3" bg="light">
+							<Card.Body>
+								<Card.Title>Side widget</Card.Title>
+								<Card.Text>Widget text</Card.Text>
+							</Card.Body>
+						</Card>
+					</Col>
+				</Row>
+			</Container>
 		);
 	}
 }
